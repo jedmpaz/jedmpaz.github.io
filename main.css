@@ -1,0 +1,73 @@
+@font-face {
+    font-family: Akrobat;
+    src: url(fonts/Akrobat-Regular.otf);
+}
+
+.container {
+    position:relative;
+    padding:0 0 0 150px;
+}
+
+#sidebar {
+    position: absolute;
+    top:0; bottom:0; left:0;
+    width:150px;
+    background:#1F3A52;
+    height:700px;
+    border:1px solid #1F3A52;
+}
+
+#content {
+    border: 1px solid #1F3A52;
+    width: 100%;
+    margin: 0 0 5px 0;
+    padding: 0 0 0 0px;
+    height: 700px;
+    background-image: url("img/pic.jpg");
+    background-size: cover;
+    overflow: scroll;
+}
+
+h1 {
+    text-align: center;
+    font-family: Akrobat;
+    padding: 1em;
+    background-color: white;
+    opacity: 0.7;
+}
+
+h3 {
+    font-family:Akrobat;
+}
+
+.description {
+    padding: 1em;
+    background-color: white;
+    opacity: 0.7;
+}
+
+div.tab {
+    float: left;
+    background-color: #1F3A52;
+    width: 100%;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding: 20px 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 17px;
+    font-family: Akrobat;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+div.tab button:hover {
+    background-color:#41A186;
+}

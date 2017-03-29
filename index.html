@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jed Paz</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">home</button>
+                <button class="tablinks" onclick="openTab(event, 'Bio')">about me</button>
+                <button class="tablinks" onclick="openTab(event, 'Resume')">resume</button>
+                <button class="tablinks" onclick="openTab(event, 'SampleWork')">sample work</button>
+                <button class="tablinks" onclick="openTab(event, 'Contact')">contact</button>
+            </div>
+        </div>
+        <div id="content">
+            <div id="Home" class="tabcontent">
+                <h1>j e d &#160 p a z</h1>
+            </div>
+
+            <div id="Bio" class="tabcontent" style="display:none">
+                <h1>a b o u t &#160 m e</h1>
+                <div class="description">
+                    <h3>Computer Science Major - Georgia Tech</h3>
+                    <ul style="list-style-type:disc">
+                        <li><h3>Current year: 4th</h3></li>
+                    </ul>
+                    <h3>Interests</h3>
+                    <ul style="list-style-type:disc">
+                        <li><h3>Web Development</h3></li>
+                        <li><h3>Front End Design</h3></li>
+                        <li><h3>Database Management</h3></li>
+                    </ul>
+                    <h3>Skills</h3>
+                    <ul style="list-style-type:disc">
+                        <li><h3>Languages & Technologies: Java, HTML, CSS, C, PHP, Javascript, SQL, Python</h3></li>
+                        <li><h3>Programs & Environments: Photoshop, Illustrator, Microsoft Office, IntelliJ</h3></li>
+                        <li><h3>Frameworks & Libraries: Bootstrap, Angular, Node, jQuery, d3</h3></li>
+                    </ul>
+                    <h3>Involvement</h3>
+                    <ul style="list-style-type:disc">
+                        <li><h3>GT Musicians Network Head of Advertising [Jan 2017 - present]</h3></li>
+                        <li><h3>GT Musicians Network Advertising Officer [Aug 2015 - Dec 2016]</h3></li>
+                        <li><h3>Emerging Leaders [Aug 2013 - May 2014]</h3></li>
+                    </ul>
+                    <h3>Hobbies</h3>
+                    <ul style="list-style-type:disc">
+                        <li><h3>Music</h3></li>
+                        <li><h3>Graphic Design</h3></li>
+                        <li><h3>Volleyball</h3></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="Resume" class="tabcontent" style="display:none">
+                <h1>r e s u m e</h1>
+                <div class="description">
+                    <embed src="pdf/jpresume2017.pdf" height="400px" width="70%" overflow="scroll" align="middle"/>
+                    <a href="pdf/jpresume2017.pdf" download>
+                        <h3 style="text-align:center">Download resume here</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div id="SampleWork" class="tabcontent" style="display:none">
+                <h1>s a m p l e &#160 w o r k</h1>
+                <div class="description">
+                    <div class="sample" align="middle">
+                        <a target="_blank" href="img/paws.png">
+                            <img src="img/paws.png" alt="Working Dog Data Dash" width="50%" >
+                        </a>
+                        <div class="sampletext">
+                            <h3 style="text-align:center" width="45%">Working Dog Data Dash is a web application
+                                that analyzes and visualizes data on dogs undergoing training to become service dogs
+                            </h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="sample" align="middle">
+                        <a target="_blank" href="img/butler.png">
+                            <img src="img/butler.png" alt="ButlerBot" width="50%">
+                        </a>
+                        <div class="sampletext">
+                            <h3 style="text-align:center" style="width=:45%">Butler Bot for Discord is a chat bot that
+                                automoderates a chat server in Discord (removing content against the rules and providing help to
+                                users), as well as providing content via Reddit, Youtube, and Soundcloud APIs
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Contact" class="tabcontent" style="display:none">
+                <h1>c o n t a c t &#160 m e</h1>
+                <div class="description">
+                    <a href="mailto:jedmpaz@gmail.com?Subject=Hello%20(Website)" target="_top"><h3 style="text-align:center">Send email</h3></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
+</html>
